@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-1 Online Coaching | COACH CHRIS</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font stack (default in Tailwind) for modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            /* CRITICAL FIX: Ensures no horizontal scrolling or text overflow */
+            overflow-x: hidden; 
+            /* Ensures anchor links scroll below the sticky header */
+            scroll-padding-top: 5rem; 
+        }
+        /* Custom styles for the high-impact CTA button (Final Sign Up Block) */
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+            border: 3px solid #000;
+            background-color: #fff;
+            color: #000;
+            box-shadow: 6px 6px 0 0 #000; /* Dramatic offset shadow */
+        }
+        .cta-button:hover {
+            box-shadow: 2px 2px 0 0 #000;
+            transform: translate(4px, 4px); /* Shift to simulate button press */
+        }
+        /* Style for mid-page CTA button */
+        .mid-cta-button {
+            border: 2px solid #000;
+            background-color: #f3f4f6;
+            color: #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+        }
+        .mid-cta-button:hover {
+            background-color: #fff;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        /* Asymmetrical header style for the main branding section */
+        .section-header-box {
+            border-bottom: 2px solid;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        /* Style for the header sign-up button */
+        .header-signup-btn {
+            border: 2px solid #fff; /* White border for contrast */
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+            transition: all 0.2s;
+        }
+        .header-signup-btn:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-1px);
+        }
+        /* Style for feature icons to match the bold theme */
+        .feature-icon {
+            font-size: 3rem; /* Large icon size */
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+    <!-- Header & Navigation (Sticky, Monochromatic Branding) -->
+    <header class="sticky top-0 z-10 bg-black/95 backdrop-blur-sm p-4 border-b border-white/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- BRANDING BLOCK - Final Stacking Hierarchy -->
+            <div class="text-left leading-none">
+                <!-- 1-1 ONLINE COACHING (Primary Title) -->
+                <div class="text-xl sm:text-2xl font-black uppercase leading-tight text-white mb-1">
+                    1-1 ONLINE COACHING
+                </div>
+                <!-- COACH CHRIS (Sub-Title 1 - set to white for visibility) -->
+                <div class="text-lg sm:text-xl font-extrabold uppercase leading-tight text-white">
+                    COACH CHRIS
+                </div>
+                <!-- CIRCULAR ROOTS COACHING (Sub-Title 2, Smaller than Sub-Title 1) -->
+                <div class="text-sm sm:text-base font-extrabold uppercase leading-tight text-neutral-500 mb-0.5">
+                    CIRCULAR ROOTS COACHING
+                </div>
+                <!-- TRAIN UNCNVNTNL (Smallest Tagline) -->
+                <div class="text-xs font-bold uppercase text-neutral-600 leading-tight">
+                    TRAIN UNCNVNTNL
+                </div>
+            </div>
+            <!-- CTA 1: Quick Exit -->
+            <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-white text-black rounded-lg">
+                GET STARTED
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Focused Text Block -->
+    <section class="min-h-[70vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 bg-black text-white">
+        <div class="max-w-6xl mx-auto w-full">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl">
+                YOUR PERSONAL COACH, YOUR BLUEPRINT.
+            </h1>
+            <!-- ACCENT TEXT - Green -->
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500">
+                GET FITTER, STRONGER, AND BETTER.
+            </h2>
+            <!-- BOLD ITALIC TEXT: font-semibold italic -->
+            <p class="text-xl sm:text-2xl font-semibold italic mt-4 max-w-4xl">
+                Are you tired of generic programs that ignore your real life? Do you crave a fitness plan that adapts to your unique goals, schedule, and environment?
+            </p>
+        </div>
+    </section>
+    
+    <main>
+        <!-- PREMISE SECTION (White Background) -->
+        <section class="bg-white text-black py-20 px-4 sm:px-6 border-y border-black">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
+                    1-1 Online Coaching: The Fully Customized Solution.
+                </h2>
+                <!-- BOLD ITALIC TEXT: font-semibold italic -->
+                <p class="text-2xl font-semibold italic mb-6 max-w-5xl">
+                    The path to getting Fitter, Stronger & Better requires more than just a workout—it requires a coach, a bespoke strategy, and unwavering support. Our 1-1 Online Coaching is your personalized blueprint, guaranteeing direction, personalization, and accountability every step of the way.
+                </p>
+                <!-- Text with specific bold italic emphasis -->
+                <p class="text-xl font-normal mb-8 max-w-5xl text-neutral-700">
+                    Generic training apps and cookie-cutter plans are designed to fail you. They don't account for your shifting schedule, stress levels, unique injury history, or recovery needs. We throw out the generic template and focus purely on <span class="font-bold italic">your</span> results, leveraging proven training and nutritional methodologies tailored to your unique biology and current life environment. This is the difference between temporary effort and permanent progress.
+                </p>
+                <!-- CTA 2: Captures initial interest -->
+                <div class="text-center mt-12">
+                    <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
+                        START YOUR TRANSFORMATION
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE 1: BESPOKE PROGRAMMING (Black Background) -->
+        <section class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    1. 🥇 TRULY BESPOKE PROGRAMMING, DESIGNED FOR YOUR LIFE.
+                </h2>
+                <!-- BOLD ITALIC TEXT: font-semibold italic -->
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
+                    We start where generic programs end. Your journey begins with a deep dive into your goals, schedule, and resources to create a plan that is entirely unique, maximizing every session.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <!-- Feature A: Individualised Goal Setting & Periodization (Expanded) -->
+                    <div>
+                        <span class="feature-icon text-white">🎯</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Individualised Goal Setting & Periodization</h3>
+                        <p class="text-lg">We don't just set targets; we design the path. This involves strategic <span class="font-bold italic">Periodization</span>—breaking your journey into focused phases (Hypertrophy, Strength, Peak)—ensuring continuous progress without burnout. Every action moves you closer to your personal vision of Fitter, Stronger, and Better by avoiding the common plateaus of linear programming.</p>
+                    </div>
+
+                    <!-- Feature B: Dynamic Training Program & Exercise Selection (Expanded) -->
+                    <div>
+                        <span class="feature-icon text-white">⚙️</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Dynamic Training Program & Exercise Selection</h3>
+                        <p class="text-lg">You receive a bespoke, custom-designed Training Program based on your goals, schedule, and available equipment—whether you train at a gym or at home. Crucially, the program includes dynamic adaptability, with exercises specifically selected (and modified weekly) to address movement quality, injury history, and maximum effectiveness. We ensure you are always training optimally.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURE 2: NUTRITION (White Background) -->
+        <section class="bg-white text-black py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-black text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    2. 🍎 NUTRITION THAT FUELS PERFORMANCE, NOT FRUSTRATION.
+                </h2>
+                <!-- BOLD ITALIC TEXT: font-semibold italic -->
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-600">
+                    Dieting shouldn't mean confusion or restriction. We provide the clarity and coaching you need to make sustainable changes built around your lifestyle.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+                    <!-- Feature A: Tailored Macro Strategies, Not Strict Meals (Expanded) -->
+                    <div>
+                        <span class="feature-icon text-black">🔬</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Tailored Macro Strategies, Not Strict Meals</h3>
+                        <p class="text-lg">Forget one-size-fits-all meal plans that lead to restriction fatigue. We provide precise Tailored Calorie & Macronutrient Targets that align perfectly with your training demands, desired rate of progress, and, most importantly, your food preferences. We build <span class="font-bold italic">flexibility</span> into your nutrition so you can enjoy your life while still hitting your goals.</p>
+                    </div>
+
+                    <!-- Feature B: Mastering Sustainable Nutritional Habits (Expanded) -->
+                    <div>
+                        <span class="feature-icon text-black">🧠</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Mastering Sustainable Nutritional Habits</h3>
+                        <p class="text-lg">We focus on lasting, psychological change, not temporary fixes. You receive ongoing nutritional advice, structured habit coaching, and education on topics like satiety, gut health, and mindful eating. This empowers you to build a sustainable relationship with food, conquer cravings, and maintain your results long after our official coaching period ends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 3: Mid-Point Check-in (Re-engages after detailing services) -->
+        <section class="bg-black text-white py-12 px-4 sm:px-6 text-center border-t border-b border-white">
+            <h4 class="text-xl font-bold mb-4 uppercase text-green-500">Stop trading effort for zero results.</h4>
+            <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
+                READY TO LEVEL UP?
+            </a>
+        </section>
+        
+        <!-- FEATURE 3: SUPPORT & ACCOUNTABILITY (Black Background) -->
+        <section class="bg-black text-white py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                    3. 🤝 UNWAVERING SUPPORT & ACCOUNTABILITY.
+                </h2>
+                <!-- BOLD ITALIC TEXT: font-semibold italic -->
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
+                    Consistency is the secret to success, and support is the key to consistency. We ensure you never lose momentum and always have professional guidance.
+                </p>
+                <!-- UPDATED GRID with 4 points -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+                    <!-- Point 1 (Existing): Weekly Check-ins, Data Review, and Adaptation -->
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">✅</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Weekly Check-ins, Data Review, and Adaptation</h3>
+                        <p class="text-lg">Every week, we review your training data, progress photos, measurements, and subjective feedback. We don't just assess; we adapt. This deep analysis allows us to implement small, targeted changes to your plan, ensuring continuous progressive overload, eliminating plateaus, and keeping the program challenging and effective year-round.</p>
+                    </div>
+
+                    <!-- Point 2 (Existing): Form Analysis & Priority Messaging -->
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">📱</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Form Analysis & Priority Messaging</h3>
+                        <p class="text-lg">Get immediate feedback on your technique. You can send video clips of your lifts directly through our coaching platform, and receive detailed, personalized form analysis and cues to ensure safety and maximize muscle recruitment. Plus, enjoy direct, Priority 1-1 support via message for all your quick questions, guaranteeing rapid guidance.</p>
+                    </div>
+                    
+                    <!-- Point 3 (New): Mindset and Lifestyle Integration -->
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">🧘</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Mindset and Lifestyle Integration</h3>
+                        <p class="text-lg">Progress is holistic. We coach stress management, optimal sleep hygiene, and active recovery strategies. We understand life happens, so we help you integrate fitness around job demands, family, and travel, ensuring your physical and mental recovery supports your training intensity.</p>
+                    </div>
+
+                    <!-- Point 4 (New): Long-Term Strategy and Education -->
+                    <div class="sm:col-span-2 md:col-span-2">
+                        <span class="feature-icon text-white">📚</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white pb-1">Long-Term Strategy and Education</h3>
+                        <p class="text-lg">Our goal is to make you self-sufficient. Every check-in includes educational context explaining the 'why' behind the program changes. By teaching you the principles of progressive overload, nutritional timing, and psychological adherence, you will gain the skills to become your own highly effective coach.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final CTA & Sign Up (Isolated Box) - CTA 4: Commitment Phrase -->
+        <section id="signup" class="bg-black text-white py-20 px-4 sm:px-6 border-t border-white/20">
+            <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
+                <!-- UPDATED HEADLINE HERE -->
+                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">
+                    Ready to jump in with a coach dedicated entirely to your success?
+                </p>
+                <!-- BOLD ITALIC TEXT: font-semibold italic -->
+                <p class="text-xl font-semibold italic mb-10">
+                    Begin your personalized path to getting Fitter, Stronger & Better today.
+                </p>
+                <!-- UPDATED HREF HERE -->
+                <a href="https://tally.so/r/mKldkg" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
+                    SIGN UP FOR ONLINE COACHING
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Updated with Disclaimer and Dynamic Year -->
+    <footer class="p-10 bg-black text-neutral-400 border-t border-white/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs mb-6 leading-relaxed">
+                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any new fitness regime or make changes to your diet. This site provides general information for educational purposes only and is not intended to diagnose or treat any medical condition. You engage in physical activity at your own risk.
+            </p>
+            
+            <p class="text-sm font-semibold text-white mb-2">
+                &copy; <span id="current-year">2025</span> COACH CHRIS | CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL. All rights reserved.
+            </p>
+            
+            <p class="text-sm font-medium">
+                Fitter. Stronger. Better.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic copyright year
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // JavaScript to handle smooth scrolling for all internal anchor links (#signup)
+            document.querySelectorAll('a[href="#signup"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Stop default link behavior
+
+                    const targetElement = document.getElementById('signup');
+                    if (targetElement) {
+                        // Use scrollIntoView with smooth behavior
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
