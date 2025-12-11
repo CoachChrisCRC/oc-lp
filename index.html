@@ -20,18 +20,19 @@
         /* Custom styles for the high-impact CTA button (Final Sign Up Block) */
         .cta-button {
             transition: all 0.3s ease-in-out;
-            border: 3px solid #000;
+            /* Tailwind green-500 hex: #10b981 */
+            border: 3px solid #10b981; 
             background-color: #fff;
             color: #000;
-            box-shadow: 6px 6px 0 0 #000; /* Dramatic offset shadow */
+            box-shadow: 6px 6px 6px 0 #000; /* Dramatic offset shadow */
         }
         .cta-button:hover {
             box-shadow: 2px 2px 0 0 #000;
             transform: translate(4px, 4px); /* Shift to simulate button press */
         }
-        /* Style for mid-page CTA button */
+        /* Style for mid-page CTA button - UPDATED FOR GREEN BORDER */
         .mid-cta-button {
-            border: 2px solid #000;
+            border: 2px solid #10b981; /* Tailwind green-500 hex */
             background-color: #f3f4f6;
             color: #000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -48,14 +49,14 @@
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
-        /* Style for the header sign-up button */
+        /* Style for the header sign-up button - primary CTA */
         .header-signup-btn {
-            border: 2px solid #fff; /* White border for contrast */
-            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+            border: 2px solid black; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
             transition: all 0.2s;
         }
         .header-signup-btn:hover {
-            background-color: #f3f4f6;
+            background-color: #b7ff5f; /* Slightly lighter green on hover for effect */
             transform: translateY(-1px);
         }
         /* Style for feature icons to match the bold theme */
@@ -64,6 +65,23 @@
             line-height: 1;
             margin-bottom: 0.5rem;
             display: block;
+        }
+
+        /* Keyframes for simple bounce animation */
+        @keyframes bounce-down {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        /* Style for the arrow icon */
+        .arrow-indicator {
+            animation: bounce-down 2s infinite;
         }
     </style>
 </head>
@@ -91,10 +109,17 @@
                     TRAIN UNCNVNTNL
                 </div>
             </div>
-            <!-- CTA 1: Quick Exit -->
-            <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-white text-black rounded-lg">
-                GET STARTED
-            </a>
+            <!-- CTA Links (Swapped order: GET STARTED is Primary/Top, VIEW PRICING is Secondary/Bottom) -->
+            <div class="flex flex-col items-end space-y-3">
+                <!-- Primary CTA: GET STARTED (Now green) -->
+                <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-green-500 text-black rounded-lg">
+                    GET STARTED
+                </a>
+                <!-- Secondary CTA: VIEW PRICING (UPDATED with border-green-500) -->
+                <a href="#pricing" class="px-4 py-1.5 text-xs uppercase font-extrabold bg-neutral-800 text-white rounded-lg border border-green-500 hover:bg-neutral-700 transition">
+                    VIEW PRICING
+                </a>
+            </div>
         </div>
     </header>
 
@@ -104,7 +129,7 @@
             <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl">
                 YOUR PERSONAL COACH, YOUR BLUEPRINT.
             </h1>
-            <!-- ACCENT TEXT - Green -->
+            <!-- ACCENT TEXT - Green 500 -->
             <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500">
                 GET FITTER, STRONGER, AND BETTER.
             </h2>
@@ -132,6 +157,7 @@
                 </p>
                 <!-- CTA 2: Captures initial interest -->
                 <div class="text-center mt-12">
+                    <!-- mid-cta-button now uses custom CSS for the green border -->
                     <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                         START YOUR TRANSFORMATION
                     </a>
@@ -198,6 +224,7 @@
 
         <!-- CTA 3: Mid-Point Check-in (Re-engages after detailing services) -->
         <section class="bg-black text-white py-12 px-4 sm:px-6 text-center border-t border-b border-white">
+            <!-- Now using text-green-500 for consistency -->
             <h4 class="text-xl font-bold mb-4 uppercase text-green-500">Stop trading effort for zero results.</h4>
             <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                 READY TO LEVEL UP?
@@ -247,8 +274,63 @@
             </div>
         </section>
         
+        <!-- PRICING SECTION (New Section, underneath Section 3) -->
+        <section id="pricing" class="bg-neutral-900 text-white py-20 px-4 sm:px-6 border-t border-b border-white/20">
+            <div class="max-w-6xl mx-auto">
+                <!-- Heading -->
+                <h2 class="section-header-box border-white text-4xl font-extrabold uppercase mb-12 max-w-4xl">
+                    THE VALUE OF 1-1 COACHING
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+                    <!-- Column 1 & 2: Service Recap & Core Benefits -->
+                    <div class="md:col-span-2 space-y-4">
+                        <!-- Heading now uses text-green-500 -->
+                        <h3 class="text-2xl font-black uppercase text-green-500">WHAT YOUR INVESTMENT SECURES</h3>
+                        <p class="text-lg text-neutral-300">
+                            Your coaching fee is an investment in guaranteed, personalized results. It secures comprehensive access to every critical element required for long-term transformation:
+                        </p>
+                        <ul class="list-disc list-inside ml-4 text-neutral-400 space-y-2 text-base">
+                            <li><b class="text-white">Bespoke Programming:</b> A plan that adapts to your environment, goals, and shifting schedule.</li>
+                            <li><b class="text-white">Performance Nutrition:</b> Tailored macro targets and habit coaching built for sustainability, not restriction.</li>
+                            <li><b class="text-white">Unwavering Accountability:</b> Weekly progress reviews and unlimited video form checks to eliminate guesswork.</li>
+                            <li><b class="text-white">Direct Priority Support:</b> Coach Chris is in your corner for all questions and mindset coaching.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: The Price Box -->
+                    <div class="md:col-span-1 border-l-4 border-white/50 pl-6 md:pl-10">
+                        <h3 class="text-xl font-bold uppercase mb-4 text-neutral-400">YOUR MONTHLY INVESTMENT</h3>
+                        <div class="leading-none">
+                            <span class="text-5xl font-black text-white">
+                                £150
+                            </span>
+                            <!-- Price text now uses text-green-500 -->
+                            <span class="text-xl font-bold uppercase text-green-500 ml-2">
+                                / MONTH
+                            </span>
+                        </div>
+                        <p class="text-sm mt-4 text-neutral-500 italic">
+                            (Billed monthly, no long-term contract.)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arrow Indicator linking to final CTA -->
+        <div class="bg-neutral-900 text-white text-center pt-8 pb-4">
+            <a href="#signup" class="inline-block hover:text-green-500 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="arrow-indicator w-8 h-8 md:w-10 md:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
+            <!-- Subtler visual separator between arrow and next section -->
+            <div class="w-16 h-1 bg-white/20 mx-auto mt-2 rounded-full"></div>
+        </div>
+        
         <!-- Final CTA & Sign Up (Isolated Box) - CTA 4: Commitment Phrase -->
-        <section id="signup" class="bg-black text-white py-20 px-4 sm:px-6 border-t border-white/20">
+        <section id="signup" class="bg-black text-white py-20 px-4 sm:px-6">
             <div class="max-w-4xl mx-auto text-center pt-16 pb-16 px-8 bg-neutral-900 border-8 border-white rounded-2xl shadow-2xl">
                 <!-- UPDATED HEADLINE HERE -->
                 <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">
@@ -258,7 +340,7 @@
                 <p class="text-xl font-semibold italic mb-10">
                     Begin your personalized path to getting Fitter, Stronger & Better today.
                 </p>
-                <!-- UPDATED HREF HERE -->
+                <!-- Final CTA button: cta-button now uses custom CSS for the green border -->
                 <a href="https://tally.so/r/mKldkg" class="cta-button inline-block px-16 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-xl">
                     SIGN UP FOR ONLINE COACHING
                 </a>
@@ -291,17 +373,20 @@
                 yearSpan.textContent = new Date().getFullYear();
             }
 
-            // JavaScript to handle smooth scrolling for all internal anchor links (#signup)
-            document.querySelectorAll('a[href="#signup"]').forEach(anchor => {
+            // JavaScript to handle smooth scrolling for all internal anchor links (#signup, #pricing, etc.)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault(); // Stop default link behavior
-
-                    const targetElement = document.getElementById('signup');
-                    if (targetElement) {
-                        // Use scrollIntoView with smooth behavior
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        e.preventDefault(); 
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            // Use scrollIntoView with smooth behavior
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
                     }
                 });
             });
