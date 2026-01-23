@@ -14,68 +14,69 @@
             scroll-behavior: smooth;
             overflow-x: hidden; 
             scroll-padding-top: 5rem; 
-            /* Subtle dark gradient background to enhance glass visibility */
-            background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #000000 100%);
+            background-color: #000;
+            /* Gradient background to enhance the glass effect depth */
+            background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #000 60%);
         }
 
-        /* Glassmorphism Core Class */
+        /* Glassmorphism Base Utility */
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
         .glass-panel-light {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* Custom styles for the high-impact CTA button */
+        /* High-impact CTA button with Glass effect */
         .cta-button {
-            transition: all 0.3s ease-in-out;
-            border: 3px solid #10b981; 
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #10b981; 
+            background: rgba(16, 185, 129, 0.1);
+            backdrop-filter: blur(8px);
             color: #fff;
             box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
         }
         .cta-button:hover {
             background: #10b981;
             color: #000;
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
-            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
+            transform: scale(1.05);
         }
 
         .mid-cta-button {
-            border: 2px solid #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.5);
             background: rgba(16, 185, 129, 0.05);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(4px);
             color: inherit;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
         .mid-cta-button:hover {
-            background: #10b981;
-            color: #000 !important;
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.15);
             transform: translateY(-2px);
         }
 
         .section-header-box {
-            border-bottom: 2px solid;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
         }
 
         .header-signup-btn {
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
-            transition: all 0.2s;
+            background: #10b981;
+            color: #000;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
         }
         .header-signup-btn:hover {
-            transform: scale(1.05);
+            transform: translateY(-1px);
             filter: brightness(1.1);
         }
 
@@ -84,6 +85,7 @@
             line-height: 1;
             margin-bottom: 0.5rem;
             display: block;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
         }
 
         @keyframes bounce-down {
@@ -95,23 +97,24 @@
             animation: bounce-down 2s infinite;
         }
 
-        /* Background blur circles for depth */
-        .blur-circle {
-            position: fixed;
-            width: 40vw;
-            height: 40vw;
-            border-radius: 50%;
-            background: rgba(16, 185, 129, 0.03);
-            filter: blur(100px);
+        /* Decorative glass blobs for depth */
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #10b981;
+            filter: blur(120px);
+            opacity: 0.15;
             z-index: -1;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body class="text-white antialiased">
 
-    <!-- Decorative background elements -->
-    <div class="blur-circle top-[-10%] left-[-10%]"></div>
-    <div class="blur-circle bottom-[-10%] right-[-10%]"></div>
+    <!-- Decorative blobs -->
+    <div class="blob top-20 -left-20"></div>
+    <div class="blob bottom-40 -right-20"></div>
 
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 glass-panel border-b border-white/10 p-4">
@@ -123,18 +126,18 @@
                 <div class="text-lg sm:text-xl font-extrabold uppercase leading-tight text-white">
                     COACH CHRIS
                 </div>
-                <div class="text-sm sm:text-base font-extrabold uppercase leading-tight text-neutral-500 mb-0.5">
+                <div class="text-sm sm:text-base font-extrabold uppercase leading-tight text-neutral-400 mb-0.5">
                     CIRCULAR ROOTS COACHING
                 </div>
-                <div class="text-xs font-bold uppercase text-neutral-600 leading-tight">
+                <div class="text-xs font-bold uppercase text-neutral-500 leading-tight">
                     TRAIN UNCNVNTNL
                 </div>
             </div>
-            <div class="flex flex-col items-end space-y-3">
-                <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold bg-green-500 text-black rounded-lg">
+            <div class="flex flex-col items-end space-y-2">
+                <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
                     GET STARTED
                 </a>
-                <a href="#pricing" class="px-4 py-1.5 text-xs uppercase font-extrabold bg-white/5 text-white rounded-lg border border-green-500/50 hover:bg-white/10 transition">
+                <a href="#pricing" class="px-4 py-1.5 text-xs uppercase font-extrabold glass-panel text-white rounded-lg border border-green-500/50 hover:bg-white/10 transition">
                     VIEW PRICING
                 </a>
             </div>
@@ -142,12 +145,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-[80vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 relative">
-        <div class="max-w-6xl mx-auto w-full">
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl drop-shadow-2xl">
-                YOUR PERSONAL COACH, YOUR BLUEPRINT.
+    <section class="min-h-[80vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto w-full z-10">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl tracking-tighter">
+                YOUR PERSONAL COACH, <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">YOUR BLUEPRINT.</span>
             </h1>
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500 drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500">
                 GET FITTER, STRONGER, AND BETTER.
             </h2>
             <p class="text-xl sm:text-2xl font-semibold italic mt-4 max-w-4xl text-neutral-300">
@@ -157,9 +160,9 @@
     </section>
     
     <main>
-        <!-- PREMISE SECTION -->
-        <section class="py-20 px-4 sm:px-6 relative overflow-hidden">
-            <div class="max-w-6xl mx-auto glass-panel-light text-black p-8 md:p-16 rounded-3xl">
+        <!-- PREMISE SECTION (Light Glass Version) -->
+        <section class="relative py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto glass-panel-light p-8 md:p-16 rounded-3xl text-black shadow-2xl">
                 <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
                     1-1 Online Coaching: The Fully Customized Solution.
                 </h2>
@@ -180,7 +183,7 @@
         <!-- FEATURE 1: BESPOKE PROGRAMMING -->
         <section class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="section-header-box border-white/20 text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
                     1. 🥇 TRULY BESPOKE PROGRAMMING, <span class="text-green-500">DESIGNED FOR YOUR LIFE.</span>
                 </h2>
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
@@ -188,14 +191,15 @@
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="glass-panel p-8 rounded-2xl">
-                        <span class="feature-icon text-white">🎯</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Individualised Goal Setting & Periodization</h3>
+                    <div class="glass-panel p-8 rounded-2xl border-white/5">
+                        <span class="feature-icon">🎯</span>
+                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Individualised Goal Setting & Periodization</h3>
                         <p class="text-lg text-neutral-300">We don't just set targets; we design the path. This involves strategic <span class="font-bold italic">Periodization</span>—breaking your journey into focused phases (Hypertrophy, Strength, Peak)—ensuring continuous progress without burnout. Every action moves you closer to your personal vision of Fitter, Stronger, and Better by avoiding the common plateaus of linear programming.</p>
                     </div>
-                    <div class="glass-panel p-8 rounded-2xl">
-                        <span class="feature-icon text-white">⚙️</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Dynamic Training Program & Exercise Selection</h3>
+
+                    <div class="glass-panel p-8 rounded-2xl border-white/5">
+                        <span class="feature-icon">⚙️</span>
+                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Dynamic Training Program & Exercise Selection</h3>
                         <p class="text-lg text-neutral-300">You receive a bespoke, custom-designed Training Program based on your goals, schedule, and available equipment—whether you train at a gym or at home. Crucially, the program includes dynamic adaptability, with exercises specifically selected (and modified weekly) to address movement quality, injury history, and maximum effectiveness. We ensure you are always training optimally.</p>
                     </div>
                 </div>
@@ -203,33 +207,34 @@
         </section>
 
         <!-- FEATURE 2: NUTRITION -->
-        <section class="py-20 px-4 sm:px-6 relative">
-            <div class="max-w-6xl mx-auto glass-panel-light text-black p-8 md:p-16 rounded-3xl">
-                <h2 class="section-header-box border-black/10 text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+        <section class="py-20 px-4 sm:px-6">
+            <div class="max-w-6xl mx-auto glass-panel p-8 md:p-16 rounded-3xl">
+                <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
                     2. 🍎 NUTRITION THAT FUELS PERFORMANCE, <span class="text-green-500">NOT FRUSTRATION.</span>
                 </h2>
-                <p class="text-2xl font-semibold italic mb-12 text-neutral-600">
+                <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
                     Dieting shouldn't mean confusion or restriction. We provide the clarity and coaching you need to make sustainable changes built around your lifestyle.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white/40 p-8 rounded-2xl border border-black/5">
-                        <span class="feature-icon text-black">🔬</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Tailored Macro Strategies, Not Strict Meals</h3>
-                        <p class="text-lg">Forget one-size-fits-all meal plans that lead to restriction fatigue. We provide precise Tailored Calorie & Macronutrient Targets that align perfectly with your training demands, desired rate of progress, and, most importantly, your food preferences. We build <span class="font-bold italic">flexibility</span> into your nutrition so you can enjoy your life while still hitting your goals.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <span class="feature-icon">🔬</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Tailored Macro Strategies, Not Strict Meals</h3>
+                        <p class="text-lg text-neutral-300">Forget one-size-fits-all meal plans that lead to restriction fatigue. We provide precise Tailored Calorie & Macronutrient Targets that align perfectly with your training demands, desired rate of progress, and, most importantly, your food preferences. We build <span class="font-bold italic">flexibility</span> into your nutrition so you can enjoy your life while still hitting your goals.</p>
                     </div>
-                    <div class="bg-white/40 p-8 rounded-2xl border border-black/5">
-                        <span class="feature-icon text-black">🧠</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-black pb-1">Mastering Sustainable Nutritional Habits</h3>
-                        <p class="text-lg">We focus on lasting, psychological change, not temporary fixes. You receive ongoing nutritional advice, structured habit coaching, and education on topics like satiety, gut health, and mindful eating. This empowers you to build a sustainable relationship with food, conquer cravings, and maintain your results long after our official coaching period ends.</p>
+
+                    <div>
+                        <span class="feature-icon">🧠</span>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Mastering Sustainable Nutritional Habits</h3>
+                        <p class="text-lg text-neutral-300">We focus on lasting, psychological change, not temporary fixes. You receive ongoing nutritional advice, structured habit coaching, and education on topics like satiety, gut health, and mindful eating. This empowers you to build a sustainable relationship with food, conquer cravings, and maintain your results long after our official coaching period ends.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA 3: Mid-Point Check-in -->
+        <!-- CTA 3 -->
         <section class="py-12 px-4 sm:px-6 text-center">
-            <div class="max-w-2xl mx-auto glass-panel p-8 rounded-2xl border-green-500/20">
-                <h4 class="text-xl font-bold mb-4 uppercase text-green-500">Stop trading effort for zero results.</h4>
+            <div class="max-w-4xl mx-auto glass-panel py-10 rounded-2xl border-green-500/20">
+                <h4 class="text-xl font-bold mb-6 uppercase text-green-500">Stop trading effort for zero results.</h4>
                 <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
                     READY TO LEVEL UP?
                 </a>
@@ -239,32 +244,35 @@
         <!-- FEATURE 3: SUPPORT & ACCOUNTABILITY -->
         <section class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="section-header-box border-white/20 text-4xl font-extrabold uppercase mb-16 max-w-4xl">
+                <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
                     3. 🤝 UNWAVERING SUPPORT <span class="text-green-500">& ACCOUNTABILITY</span>.
                 </h2>
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
                     Consistency is the secret to success, and support is the key to consistency. We ensure you never lose momentum and always have professional guidance.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="glass-panel p-6 rounded-2xl sm:col-span-2">
+                    <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">✅</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Weekly Check-ins, Data Review, and Adaptation</h3>
-                        <p class="text-lg text-neutral-300">Every week, we review your training data, progress photos, measurements, and subjective feedback. We don't just assess; we adapt. This deep analysis allows us to implement small, targeted changes to your plan, ensuring continuous progressive overload, eliminating plateaus, and keeping the program challenging and effective year-round.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Weekly Check-ins</h3>
+                        <p class="text-sm text-neutral-400">Every week, we review your training data, progress photos, measurements, and subjective feedback. We don't just assess; we adapt.</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl sm:col-span-2">
+
+                    <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">📱</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Form Analysis & Priority Messaging</h3>
-                        <p class="text-lg text-neutral-300">You can send video clips of your lifts directly through our coaching platform, and receive detailed, personalized form analysis and cues to ensure safety and maximize muscle recruitment. Plus, enjoy direct, Priority 1-1 support via message for all your quick questions, guaranteeing rapid guidance.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Form Analysis</h3>
+                        <p class="text-sm text-neutral-400">Directly through our platform, receive detailed, personalized cues and analysis for all your lifts.</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl sm:col-span-2">
+                    
+                    <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">🧘</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Mindset and Lifestyle Integration</h3>
-                        <p class="text-lg text-neutral-300">We coach stress management, optimal sleep hygiene, and active recovery strategies. We understand life happens, so we help you integrate fitness around job demands, family, and travel, ensuring your physical and mental recovery supports your training intensity.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Mindset Integration</h3>
+                        <p class="text-sm text-neutral-400">We coach stress management, sleep hygiene, and recovery strategies integrated around your life demands.</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl sm:col-span-2">
+
+                    <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">📚</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Long-Term Strategy and Education</h3>
-                        <p class="text-lg text-neutral-300">Our goal is to make you self-sufficient. Every check-in includes educational context explaining the 'why' behind the program changes. By teaching you the principles of progressive overload, nutritional timing, and psychological adherence, you will gain the skills to become your own highly effective coach.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Long-Term Strategy</h3>
+                        <p class="text-sm text-neutral-400">Our goal is to make you self-sufficient by teaching you the principles behind every change in your plan.</p>
                     </div>
                 </div>
             </div>
@@ -272,31 +280,37 @@
         
         <!-- PRICING SECTION -->
         <section id="pricing" class="py-20 px-4 sm:px-6">
-            <div class="max-w-6xl mx-auto glass-panel p-8 md:p-16 rounded-3xl">
-                <h2 class="section-header-box border-white/20 text-4xl font-extrabold uppercase mb-12 max-w-4xl">
+            <div class="max-w-6xl mx-auto glass-panel p-8 md:p-12 rounded-3xl border-white/10 bg-white/5">
+                <h2 class="section-header-box text-4xl font-extrabold uppercase mb-12 max-w-4xl">
                     THE VALUE OF 1-1 COACHING
                 </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
                     <div class="md:col-span-2 space-y-4">
                         <h3 class="text-2xl font-black uppercase text-green-500">WHAT YOUR INVESTMENT SECURES</h3>
-                        <p class="text-lg text-neutral-300">
-                            Your coaching fee is an investment in guaranteed, personalized results. It secures comprehensive access to every critical element required for long-term transformation:
-                        </p>
-                        <ul class="list-disc list-inside ml-4 text-neutral-400 space-y-2 text-base">
-                            <li><b class="text-white">Bespoke Programming:</b> A plan that adapts to your environment, goals, and shifting schedule.</li>
-                            <li><b class="text-white">Performance Nutrition:</b> Tailored macro targets and habit coaching built for sustainability, not restriction.</li>
-                            <li><b class="text-white">Unwavering Accountability:</b> Weekly progress reviews and unlimited video form checks to eliminate guesswork.</li>
-                            <li><b class="text-white">Direct Priority Support:</b> Coach Chris is in your corner for all questions and mindset coaching.</li>
+                        <p class="text-lg text-neutral-300">Your coaching fee is an investment in guaranteed, personalized results:</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-neutral-400 text-base">
+                            <li class="glass-panel p-4 rounded-lg border-white/5">
+                                <b class="text-white block">Bespoke Programming:</b> Adapts to your environment and schedule.
+                            </li>
+                            <li class="glass-panel p-4 rounded-lg border-white/5">
+                                <b class="text-white block">Performance Nutrition:</b> Tailored targets built for sustainability.
+                            </li>
+                            <li class="glass-panel p-4 rounded-lg border-white/5">
+                                <b class="text-white block">Unwavering Accountability:</b> Weekly reviews and video form checks.
+                            </li>
+                            <li class="glass-panel p-4 rounded-lg border-white/5">
+                                <b class="text-white block">Direct Priority Support:</b> Coach Chris is always in your corner.
+                            </li>
                         </ul>
                     </div>
-                    <div class="md:col-span-1 glass-panel p-8 rounded-2xl border-white/20">
-                        <h3 class="text-xl font-bold uppercase mb-4 text-neutral-400">YOUR MONTHLY INVESTMENT</h3>
+
+                    <div class="md:col-span-1 glass-panel p-8 rounded-2xl border-green-500/30 text-center">
+                        <h3 class="text-xl font-bold uppercase mb-4 text-neutral-400">MONTHLY INVESTMENT</h3>
                         <div class="leading-none">
-                            <span class="text-5xl font-black text-white">£150</span>
-                            <span class="text-xl font-bold uppercase text-green-500 ml-2">/ MONTH</span>
+                            <span class="text-6xl font-black text-white">£150</span>
+                            <span class="text-xl font-bold uppercase text-green-500 block mt-2">/ MONTH</span>
                         </div>
-                        <p class="text-sm mt-4 text-neutral-500 italic">(Billed monthly, no long-term contract.)</p>
+                        <p class="text-xs mt-6 text-neutral-500 italic">(Billed monthly, no long-term contract.)</p>
                     </div>
                 </div>
             </div>
@@ -312,15 +326,15 @@
         </div>
         
         <!-- Final CTA & Sign Up -->
-        <section id="signup" class="py-20 px-4 sm:px-6">
-            <div class="max-w-4xl mx-auto text-center p-8 md:p-16 glass-panel border-white/20 rounded-3xl">
-                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase">
+        <section id="signup" class="py-20 px-4 sm:px-6 relative">
+            <div class="max-w-4xl mx-auto text-center p-8 md:p-20 glass-panel rounded-[2rem] border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                <p class="text-3xl sm:text-4xl font-black mb-6 uppercase leading-tight">
                     Ready to jump in with a <span class="text-green-500">coach</span> dedicated entirely to your <span class="text-green-500">success</span>?
                 </p>
                 <p class="text-xl font-semibold italic mb-10 text-neutral-300">
                     Begin your personalized path to getting Fitter, Stronger & Better today.
                 </p>
-                <a href="https://tally.so/r/mKldkg" class="cta-button inline-block px-12 md:px-16 py-6 font-extrabold text-xl md:text-2xl uppercase tracking-widest rounded-xl">
+                <a href="https://tally.so/r/mKldkg" class="cta-button inline-block px-12 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-2xl">
                     SIGN UP FOR ONLINE COACHING
                 </a>
             </div>
@@ -328,7 +342,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="p-10 text-neutral-500 border-t border-white/10 glass-panel">
+    <footer class="p-10 glass-panel border-t border-white/10 text-neutral-500">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-xs mb-6 leading-relaxed">
                 General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any new fitness regime or make changes to your diet. This site provides general information for educational purposes only and is not intended to diagnose or treat any medical condition. You engage in physical activity at your own risk.
@@ -345,9 +359,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const yearSpan = document.getElementById('current-year');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -365,5 +377,4 @@
     </script>
 </body>
 </html>
-
 
