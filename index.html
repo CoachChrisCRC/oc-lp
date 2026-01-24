@@ -15,11 +15,9 @@
             overflow-x: hidden; 
             scroll-padding-top: 5rem; 
             background-color: #000;
-            /* Gradient background to enhance the glass effect depth */
             background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #000 60%);
         }
 
-        /* Glassmorphism Base Utility */
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
@@ -34,7 +32,6 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        /* High-impact CTA button with Glass effect */
         .cta-button {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 2px solid #10b981; 
@@ -88,16 +85,6 @@
             filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
         }
 
-        @keyframes bounce-down {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-        .arrow-indicator {
-            animation: bounce-down 2s infinite;
-        }
-
-        /* Decorative glass blobs for depth */
         .blob {
             position: absolute;
             width: 300px;
@@ -112,7 +99,6 @@
 </head>
 <body class="text-white antialiased">
 
-    <!-- Decorative blobs -->
     <div class="blob top-20 -left-20"></div>
     <div class="blob bottom-40 -right-20"></div>
 
@@ -135,7 +121,7 @@
             </div>
             <div class="flex flex-col items-end space-y-2">
                 <a href="#signup" class="header-signup-btn px-4 py-1.5 text-xs uppercase font-extrabold rounded-lg">
-                    GET STARTED
+                    APPLY NOW
                 </a>
                 <a href="#pricing" class="px-4 py-1.5 text-xs uppercase font-extrabold glass-panel text-white rounded-lg border border-green-500/50 hover:bg-white/10 transition">
                     VIEW PRICING
@@ -148,131 +134,121 @@
     <section class="min-h-[80vh] flex flex-col items-start justify-center px-4 sm:px-6 py-20 relative overflow-hidden">
         <div class="max-w-6xl mx-auto w-full z-10">
             <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-6 uppercase max-w-4xl tracking-tighter">
-                YOUR PERSONAL COACH, <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">YOUR BLUEPRINT.</span>
+                TRAINING THAT <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">WORKS FOR YOU.</span>
             </h1>
             <h2 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-10 uppercase max-w-5xl text-green-500">
-                GET FITTER, STRONGER, AND BETTER.
+                NO GUESSWORK. JUST PROGRESS.
             </h2>
             <p class="text-xl sm:text-2xl font-semibold italic mt-4 max-w-4xl text-neutral-300">
-                Are you tired of generic programs that ignore your real life? Do you crave a fitness plan that adapts to your unique goals, schedule, and environment?
+                Generic plans rarely work for real lives. Whether you're balancing a career, family, or a busy social life, you need a strategy that bends with you, not against you.
             </p>
         </div>
     </section>
     
     <main>
-        <!-- PREMISE SECTION (Light Glass Version) -->
+        <!-- PREMISE SECTION -->
         <section class="relative py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto glass-panel-light p-8 md:p-16 rounded-3xl text-black shadow-2xl">
                 <h2 class="text-4xl font-black uppercase tracking-tighter max-w-4xl mb-6">
-                    1-1 Online Coaching: The Fully Customized Solution.
+                    This isn't just another PDF. It's a partnership.
                 </h2>
                 <p class="text-2xl font-semibold italic mb-6 max-w-5xl">
-                    The path to getting Fitter, Stronger & Better requires more than just a workout—it requires a coach, a bespoke strategy, and unwavering support. Our 1-1 Online Coaching is your personalized blueprint, guaranteeing direction, personalization, and accountability every step of the way.
+                    Getting fitter and stronger is simple on paper, but life usually complicates the execution.
                 </p>
                 <p class="text-xl font-normal mb-8 max-w-5xl text-neutral-700">
-                    Generic training apps and cookie-cutter plans are designed to fail you. They don't account for your shifting schedule, stress levels, unique injury history, or recovery needs. We throw out the generic template and focus purely on <span class="font-bold italic">your</span> results, leveraging proven training and nutritional methodologies tailored to your unique biology and current life environment. This is the difference between temporary effort and permanent progress.
+                    Standard training apps and group programs are effective for many, but they can't account for the chaos of your day-to-day. My 1-1 coaching is designed for when you need a plan built around <i>your</i> specific constraints. By moving away from "one-size-fits-most" approaches, we create a sustainable path that adapts when you have a late night at work, a weekend away, or shifting priorities. The best program is the one that evolves with you.
                 </p>
                 <div class="text-center mt-12">
                     <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
-                        START YOUR TRANSFORMATION
+                        BUILD YOUR INDIVIDUAL PLAN
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- FEATURE 1: BESPOKE PROGRAMMING -->
+        <!-- FEATURE 1 -->
         <section class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    1. 🥇 TRULY BESPOKE PROGRAMMING, <span class="text-green-500">DESIGNED FOR YOUR LIFE.</span>
+                    1. 🥇 YOUR SESSIONS, <span class="text-green-500">YOUR WAY.</span>
                 </h2>
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
-                    We start where generic programs end. Your journey begins with a deep dive into your goals, schedule, and resources to create a plan that is entirely unique, maximizing every session.
+                    We start with the equipment you have available. Whether you’re in a fully-equipped gym or training in your living room, we make every minute count.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="glass-panel p-8 rounded-2xl border-white/5">
                         <span class="feature-icon">🎯</span>
-                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Individualised Goal Setting & Periodization</h3>
-                        <p class="text-lg text-neutral-300">We don't just set targets; we design the path. This involves strategic <span class="font-bold italic">Periodization</span>—breaking your journey into focused phases (Hypertrophy, Strength, Peak)—ensuring continuous progress without burnout. Every action moves you closer to your personal vision of Fitter, Stronger, and Better by avoiding the common plateaus of linear programming.</p>
+                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Built for Your Goals</h3>
+                        <p class="text-lg text-neutral-300">Random exercises don't yield results. We map out the exact steps required to reach your target. By phasing your training correctly, we ensure consistent forward motion without burnout or plateaus.</p>
                     </div>
 
                     <div class="glass-panel p-8 rounded-2xl border-white/5">
                         <span class="feature-icon">⚙️</span>
-                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Dynamic Training Program & Exercise Selection</h3>
-                        <p class="text-lg text-neutral-300">You receive a bespoke, custom-designed Training Program based on your goals, schedule, and available equipment—whether you train at a gym or at home. Crucially, the program includes dynamic adaptability, with exercises specifically selected (and modified weekly) to address movement quality, injury history, and maximum effectiveness. We ensure you are always training optimally.</p>
+                        <h3 class="font-black text-2xl uppercase mb-4 border-b border-white/20 pb-1">Flexible & Adaptive</h3>
+                        <p class="text-lg text-neutral-300">If your schedule changes or an injury occurs, the plan pivots. Your training program is a living document—I modify your exercises weekly to ensure everything feels right, stays safe, and keeps you motivated.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FEATURE 2: NUTRITION -->
+        <!-- FEATURE 2 -->
         <section class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto glass-panel p-8 md:p-16 rounded-3xl">
                 <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    2. 🍎 NUTRITION THAT FUELS PERFORMANCE, <span class="text-green-500">NOT FRUSTRATION.</span>
+                    2. 🍎 EATING WELL <span class="text-green-500">WITHOUT THE STRESS.</span>
                 </h2>
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
-                    Dieting shouldn't mean confusion or restriction. We provide the clarity and coaching you need to make sustainable changes built around your lifestyle.
+                    Dieting shouldn’t mean missing out on life. We’ll find the balance that fuels your body while keeping your lifestyle enjoyable.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div>
                         <span class="feature-icon">🔬</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Tailored Macro Strategies, Not Strict Meals</h3>
-                        <p class="text-lg text-neutral-300">Forget one-size-fits-all meal plans that lead to restriction fatigue. We provide precise Tailored Calorie & Macronutrient Targets that align perfectly with your training demands, desired rate of progress, and, most importantly, your food preferences. We build <span class="font-bold italic">flexibility</span> into your nutrition so you can enjoy your life while still hitting your goals.</p>
+                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">No Rigid Meal Plans</h3>
+                        <p class="text-lg text-neutral-300">Prescribing every single meal isn't sustainable. Instead, I provide calorie and macro targets tailored to your goals. This offers the freedom to choose foods you actually like while still hitting your numbers.</p>
                     </div>
 
                     <div>
                         <span class="feature-icon">🧠</span>
-                        <h3 class="font-black text-2xl uppercase mb-2 border-b border-white/20 pb-1">Mastering Sustainable Nutritional Habits</h3>
-                        <p class="text-lg text-neutral-300">We focus on lasting, psychological change, not temporary fixes. You receive ongoing nutritional advice, structured habit coaching, and education on topics like satiety, gut health, and mindful eating. This empowers you to build a sustainable relationship with food, conquer cravings, and maintain your results long after our official coaching period ends.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/20 pb-1">Habits for the Long Haul</h3>
+                        <p class="text-lg text-neutral-300">Understanding the "why" behind your choices is key. From managing cravings to mastering satiety, I help you build a healthier relationship with food so you can maintain your results for years, not just weeks.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA 3 -->
-        <section class="py-12 px-4 sm:px-6 text-center">
-            <div class="max-w-4xl mx-auto glass-panel py-10 rounded-2xl border-green-500/20">
-                <h4 class="text-xl font-bold mb-6 uppercase text-green-500">Stop trading effort for zero results.</h4>
-                <a href="#signup" class="mid-cta-button inline-block px-10 py-4 font-extrabold text-lg uppercase rounded-lg">
-                    READY TO LEVEL UP?
-                </a>
-            </div>
-        </section>
-        
-        <!-- FEATURE 3: SUPPORT & ACCOUNTABILITY -->
+        <!-- FEATURE 3 -->
         <section class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="section-header-box text-4xl font-extrabold uppercase mb-16 max-w-4xl">
-                    3. 🤝 UNWAVERING SUPPORT <span class="text-green-500">& ACCOUNTABILITY</span>.
+                    3. 🤝 A COACH <span class="text-green-500">IN YOUR CORNER.</span>
                 </h2>
                 <p class="text-2xl font-semibold italic mb-12 text-neutral-400">
-                    Consistency is the secret to success, and support is the key to consistency. We ensure you never lose momentum and always have professional guidance.
+                    You’re never doing this alone. I’m here to guide you, check your form, and keep you on track through the tough weeks.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">✅</span>
-                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Weekly Check-ins</h3>
-                        <p class="text-sm text-neutral-400">Every week, we review your training data, progress photos, measurements, and subjective feedback. We don't just assess; we adapt.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Weekly Catch-ups</h3>
+                        <p class="text-sm text-neutral-400">We review your week together—analyzing how you’re feeling, sleeping, and recovering to adjust the plan for the week ahead.</p>
                     </div>
 
                     <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">📱</span>
-                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Form Analysis</h3>
-                        <p class="text-sm text-neutral-400">Directly through our platform, receive detailed, personalized cues and analysis for all your lifts.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Form Checks</h3>
+                        <p class="text-sm text-neutral-400">Submit videos of your lifts anytime for technical feedback. Move with confidence and stay injury-free.</p>
                     </div>
                     
                     <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">🧘</span>
-                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Mindset Integration</h3>
-                        <p class="text-sm text-neutral-400">We coach stress management, sleep hygiene, and recovery strategies integrated around your life demands.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Real Life Support</h3>
+                        <p class="text-sm text-neutral-400">We tackle stress, sleep, and mindset. If these elements aren't right, the training won't reach its full potential.</p>
                     </div>
 
                     <div class="glass-panel p-6 rounded-xl">
                         <span class="feature-icon text-white">📚</span>
-                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">Long-Term Strategy</h3>
-                        <p class="text-sm text-neutral-400">Our goal is to make you self-sufficient by teaching you the principles behind every change in your plan.</p>
+                        <h3 class="font-black text-xl uppercase mb-2 border-b border-white/10 pb-1">The Knowledge</h3>
+                        <p class="text-sm text-neutral-400">The goal is to provide the education necessary for you to eventually become self-sufficient in your training.</p>
                     </div>
                 </div>
             </div>
@@ -282,60 +258,63 @@
         <section id="pricing" class="py-20 px-4 sm:px-6">
             <div class="max-w-6xl mx-auto glass-panel p-8 md:p-12 rounded-3xl border-white/10 bg-white/5">
                 <h2 class="section-header-box text-4xl font-extrabold uppercase mb-12 max-w-4xl">
-                    THE VALUE OF 1-1 COACHING
+                    Simple, Transparent Pricing
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-                    <div class="md:col-span-2 space-y-4">
-                        <h3 class="text-2xl font-black uppercase text-green-500">WHAT YOUR INVESTMENT SECURES</h3>
-                        <p class="text-lg text-neutral-300">Your coaching fee is an investment in guaranteed, personalized results:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+                    <div class="md:col-span-2 space-y-6">
+                        <h3 class="text-2xl font-black uppercase text-green-500">Everything you need to succeed</h3>
+                        <p class="text-lg text-neutral-300">No hidden tiers or upsells. Just professional coaching focused on you:</p>
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-neutral-400 text-base">
                             <li class="glass-panel p-4 rounded-lg border-white/5">
-                                <b class="text-white block">Bespoke Programming:</b> Adapts to your environment and schedule.
+                                <b class="text-white block">Custom Training:</b> Built for your space and your schedule.
                             </li>
                             <li class="glass-panel p-4 rounded-lg border-white/5">
-                                <b class="text-white block">Performance Nutrition:</b> Tailored targets built for sustainability.
+                                <b class="text-white block">Nutrition Coaching:</b> Targets that work for your lifestyle.
                             </li>
                             <li class="glass-panel p-4 rounded-lg border-white/5">
-                                <b class="text-white block">Unwavering Accountability:</b> Weekly reviews and video form checks.
+                                <b class="text-white block">Real Accountability:</b> Weekly check-ins and video feedback.
                             </li>
                             <li class="glass-panel p-4 rounded-lg border-white/5">
-                                <b class="text-white block">Direct Priority Support:</b> Coach Chris is always in your corner.
+                                <b class="text-white block">Direct Access:</b> I'm just a message away when questions arise.
                             </li>
                         </ul>
                     </div>
 
                     <div class="md:col-span-1 glass-panel p-8 rounded-2xl border-green-500/30 text-center">
-                        <h3 class="text-xl font-bold uppercase mb-4 text-neutral-400">MONTHLY INVESTMENT</h3>
-                        <div class="leading-none">
-                            <span class="text-6xl font-black text-white">£150</span>
+                        <h3 class="text-xl font-bold uppercase mb-4 text-neutral-400">INVESTMENT</h3>
+                        <div class="leading-none mb-4">
+                            <span class="text-6xl font-black text-white">£175</span>
                             <span class="text-xl font-bold uppercase text-green-500 block mt-2">/ MONTH</span>
                         </div>
-                        <p class="text-xs mt-6 text-neutral-500 italic">(Billed monthly, no long-term contract.)</p>
+                        <p class="text-xs text-neutral-500 italic mb-6">(Billed monthly. Cancel anytime.)</p>
+                        
+                        <!-- Comparison Section Underneath -->
+                        <div class="pt-6 border-t border-white/10 space-y-3">
+                            <p class="text-green-500 font-black text-xl uppercase">That's less than £6 per day</p>
+                            <p class="text-sm text-neutral-300 italic px-2">
+                                roughly the price of a <span class="text-white font-bold">daily coffee & snack</span>...
+                            </p>
+                            <p class="text-xs text-neutral-500 uppercase tracking-widest font-black">OR</p>
+                            <p class="text-sm text-neutral-300 italic px-2">
+                                swapping <span class="text-white font-bold">one meal out per week</span> for life-changing results.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Arrow Indicator -->
-        <div class="text-center pt-8 pb-4">
-            <a href="#signup" class="inline-block hover:text-green-500 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="arrow-indicator w-8 h-8 md:w-10 md:h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-            </a>
-        </div>
-        
-        <!-- Final CTA & Sign Up -->
+        <!-- Final CTA -->
         <section id="signup" class="py-20 px-4 sm:px-6 relative">
             <div class="max-w-4xl mx-auto text-center p-8 md:p-20 glass-panel rounded-[2rem] border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <p class="text-3xl sm:text-4xl font-black mb-6 uppercase leading-tight">
-                    Ready to jump in with a <span class="text-green-500">coach</span> dedicated entirely to your <span class="text-green-500">success</span>?
+                    Ready to work <span class="text-green-500">with</span> a coach who actually <span class="text-green-500">gets it</span>?
                 </p>
                 <p class="text-xl font-semibold italic mb-10 text-neutral-300">
-                    Begin your personalized path to getting Fitter, Stronger & Better today.
+                    Your goals don't have to wait for the "perfect" time. We start where you are today.
                 </p>
                 <a href="https://tally.so/r/mKldkg" class="cta-button inline-block px-12 py-6 font-extrabold text-2xl uppercase tracking-widest rounded-2xl">
-                    SIGN UP FOR ONLINE COACHING
+                    APPLY & GET INVOLVED
                 </a>
             </div>
         </section>
@@ -345,7 +324,7 @@
     <footer class="p-10 glass-panel border-t border-white/10 text-neutral-500">
         <div class="max-w-4xl mx-auto text-center">
             <p class="text-xs mb-6 leading-relaxed">
-                General Fitness Disclaimer: Always consult your medical professional or doctor before you begin any new fitness regime or make changes to your diet. This site provides general information for educational purposes only and is not intended to diagnose or treat any medical condition. You engage in physical activity at your own risk.
+                Health First: Always check with your doctor before starting a new exercise or diet program. I’m here to help you train hard and eat well, but this information is for educational purposes and isn't medical advice.
             </p>
             <p class="text-sm font-semibold text-white mb-2">
                 &copy; <span id="current-year">2025</span> COACH CHRIS | CIRCULAR ROOTS COACHING | TRAIN UNCNVNTNL. All rights reserved.
@@ -377,3 +356,4 @@
     </script>
 </body>
 </html>
+
